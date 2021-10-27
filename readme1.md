@@ -1,3 +1,4 @@
+代码地址：https://github.com/Mianer/hw-sinatra-saas-wordguesser
 下面主要介绍part0-part4部分完成步骤
 ------------------------------------------------------------------------------
 part_0 用Sinatra框架创建一个"hello world" app，并部署到Heroku
@@ -58,7 +59,7 @@ end
 
 
 ------------------------------------------------------------------------------
-part_1 在hw-sinatra-saas-wordguesser项目中使用autotest
+part_1 TDD测试驱动开发
 1.从GitHub中下载项目
 在git Bash中执行命令：git clone https://github.com/saasbook/hw-sinatra-saas-wordguesser
 进入hw-sinatra-saas-wordguesser，执行bundle
@@ -71,6 +72,8 @@ part_1 在hw-sinatra-saas-wordguesser项目中使用autotest
 `wordguesser_game.rb`中， use `attr_accessor`
 如图part1-autotest-pass.png
 
+接下来修改代码，18个案例通过。如图part1-18 examples pass.png
+
 4.Debugging的使用
 
 ------------------------------------------------------------------------------
@@ -81,7 +84,7 @@ part_3 运行项目
 
 ------------------------------------------------------------------------------
 part_4 使用cucumber
-1.理解cucumber（浏览器模拟器机制）
+1.理解cucumber
 如当cucumber执行features/guess.feature中scenario-Given I start a new game with word "garply"时，
 game_steps.rb中Lines 13-16将被执行
 
@@ -96,7 +99,7 @@ params[],key中存放form表单的属性名称，value存放input框中用户键
 
 4.Develop the scenario for guessing a letter
 修改app.rb,见代码。
-执行$ cucumber features/guess.feature
+执行$ cucumber features/guess.feature，结果如图part4-guess.feature pass.png
 
 
 

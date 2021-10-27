@@ -1,0 +1,12 @@
+下面介绍cucumber框架
+
+cucumber是ruby的BDD（行为驱动开发）框架，开发人员主要与两类文件打交到，Feature文件和相应的Step文件。
+
+Feature文件：是以 feature为后缀名的文件，以Given-When-Then的方式描述了系统的场景(scenarios)行为；
+Feature文件直接位于features文件夹下，可以为每个应用场景创建一个Feature文件。
+
+Step文件：为普通的Ruby文件，Feature文件中的每个Given/When/Then步骤在Step文件中都有对应的Ruby执行代码，两类文件通过正则表达式相关联。与 Feature文件对应的Step文件（如game_steps.rb）位于step_definitions子文件夹下。
+
+support子文件夹，其下的 env.rb文件为环境配置文件。在这样的目录结构条件下执行cucumber命令，会首先执行env.rb做前期准备工作，然后Cucumber将game_steps.rb文件读入内存，最后执行guess.feature文件，当遇到Given/When/Then步骤 时，Cucumber将在game_steps.rb中搜索是否有相应的step，如果有，则执行相应的Ruby代码。
+
+Capybara：cucumber用Capybara作为浏览器模拟器

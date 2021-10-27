@@ -8,7 +8,7 @@ class WordGuesserApp < Sinatra::Base
   register Sinatra::Flash
   
   before do
-    @game = session[:game] || WordGuesserGame.new('','','')
+    @game = session[:game] || WordGuesserGame.new('')
   end
   
   after do
